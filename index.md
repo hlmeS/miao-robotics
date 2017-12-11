@@ -43,3 +43,43 @@ In the second circuit, we will connect a potentiometer to an Arduino analog inpu
 ## Part 3: Arduino Coding
 
 Ok, now that we have the hardware in place, we can start coding.
+Before diving into the details of coding, let's remind ourselves what we're trying to do here:
+1. Control and LED with an automated computer program
+2. Read the voltage of a voltage dividing potentiometer
+3. Use a potentiometer to turn an LED on and off
+
+Now that we know our goals, we can split this problem into three different parts and write own program for each problem.
+
+The programming approach for each of these is exactly the same, as every Arduino program is structured the same way. You can think of Arduino programs like simple a simple board game. When playing a board game, you typically do the following:
+1. Define the game you are playing and some of the game rules
+2. You setup the game by identifying players and setting up the "board" of the game.
+3. Once everyone knows who is playing in the game and what the rules are, you can play the game. Typically this involves doing same procedures in every round of the game until someone wins.
+
+An Arduino program is the same, except that there is no winner. You
+1. Define global names and variables, e.g. `int green_LED = 9;`;
+2. You setup your program in `void setup()`. Here you say what each pin is doing and at what speed you want to talk to the computer `Serial.begin(9600);`
+3. Lastly there is the `void loop()`. Here you can define the routines that you want your program to execute, e.g. `digital.Write(green_LED, HIGH);`
+
+### Problem 1: LED control
+
+Let's think about what we need here:
+
+1. Global variables:
+  - You need to name your LED pin as an `int`. In the following line, we will define a green_LED as pin 9. You can change this based on the color that you are using, or give it any other name that you want. _The only important thing is that the number that you put here, `9`, is the pin that you are connecting to on your Arduino._
+  ```
+  int green_LED = 9;
+  ```
+
+2. Setup:
+  - In the setup, we want to make sure that our LED pin is defined as an output:
+  ```
+  pinMode(green_LED, OUTPUT);
+  ```
+  - We also want to set the language that we're communiting with between the computer and the Arduino:
+  ```
+  Serial.begin(9600);
+  ```
+
+3. Loop:
+  - In the main loop, we basically just want to make the LED blink. For this, you need one command that allows you to turn the LED on and off, and one that allows you put a pause in your program.
+  
