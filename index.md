@@ -82,4 +82,35 @@ Let's think about what we need here:
 
 3. Loop:
   - In the main loop, we basically just want to make the LED blink. For this, you need one command that allows you to turn the LED on and off, and one that allows you put a pause in your program.
-  
+  - To turn a digital output pin on and off, or HIGH and LOW, we use the `digitalWrite()` command. So if we want to turn the `green_LED` (pin 9) on, we say
+  ```
+  digitalWrite(green_LED, HIGH);
+  ```
+  And if we want to turn it off, we use
+  ```
+  digitalWrite(green_LED, LOW);
+  ```
+  - Now because our computer is so fast, if we write on and off immediately one after another, we are going to have a problem seeing the on/off action. (Try it out and see what happens!). So, to make it blink at 1 second interval, we can put a time belay between the on-off and the off-on. (Why do you need two delay?). In Arduino, we can use the ```delay()``` command to do this. Within in the function parameters `()`, we specify the delay that we want in milliseconds. So a 1-second delay would mean that you write
+  ```
+  delay(1000);
+  ```
+
+The entire code should look something like shown below. Do not just copy it, but write your own program. Change the pin number to `8`, name your led something else, and change the interval (the delays) that you're blinking at.
+
+```c
+int green_LED = 9;
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin 13 as an output.
+  pinMode(green_LED, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(green_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(green_LED, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
+}
+```
