@@ -13,6 +13,28 @@ Today we will explore some fundamental programming concepts of loops and conditi
 
 ![LED schematic](images/lab2/lab2_12led_breadboard.png)
 
+## Coding without loops
+
+Imagine you want to control all 12 LEDs that you have wired up. Can you guess how much typing it would take to control each one using just basic coding that we used last time? Well, take a look at the code below, copy it to your Arduino IDE, and then try adding to it to make the LED's blink backwards from 12 to 1. What do you think, is there an easier way? How would make this program better?
+
+```c
+int green_LED = 9;
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin 13 as an output.
+  pinMode(green_LED, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(green_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(green_LED, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
+}
+```
+
 
 # Lab 1: Circuits and GPIO Control with Arduino
 
