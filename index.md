@@ -153,7 +153,7 @@ So far so good, let's see how we can learn more about potentiometers by sensing 
   delay(1000);
   ```
 
-  The entire code should look something like shown below. Do not just copy it, but write your own program. Change the pin number to `1`, name your `reading` variable something else, and change the interval (the delays) that you're reading at.
+  The entire code should look something like shown below. Do not just copy it, but write your own program. **Change the pin number to `1` (what does that mean for our circuit?), name your `reading` variable something else (like `pot_reading`, `pot_recording`, etc.), and change the interval (the delay) that you're reading at.**
 
   ```c
   int pot = 0;
@@ -175,10 +175,10 @@ So far so good, let's see how we can learn more about potentiometers by sensing 
   ```
 ### Problem 3: Can we combine Potentiomers and LEDs?
 
-How would you combine the LED program and the potentiometer program into a single program? What would you want it to do?
+**How would you combine the LED program and the potentiometer program into a single program? What would you want it to do?**
 To give you a possible example, have you every turn a knob that makes a light fade in and out? How do think that works?
 
-**Hint: **<br>
+**Hint:** <br>
 In Arduino, instead of just turning pins on and off using `digitalWrite(pin, HIGH)` and `digitalWrite(pin, LOW)`, we can actually output anything in between the two. You can do this using the `analogWrite(pin, value)` function, where `pin` is the pin that you're using to connect to the LED, and `value` is a number between `0` and `255`. The higher the number, the closer the output will be to 5V, which is the maximum. So, if you want your LED to light at half the brightness, you could say
 ```c
 analogWrite(led_pin, 127);
