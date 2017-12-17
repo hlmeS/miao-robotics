@@ -3,11 +3,12 @@
 - General announcements
   - [Introduction](#introduction)
 - Lab Activities
-  - [Lab 1: Circuits and GPIO Control with Arduino](#lab-1-circuits-and-gpio-control-with-arduino) --- Updated 9/20
+  - [Lab 1: Circuits and GPIO Control with Arduino](#lab-1-circuits-and-gpio-control-with-arduino)
+  - [Lab 2: X-mas lights with Arduino](#lab-2-x-mas-lights-with-arduino)
 
-# Introduction
 
-Aloha! Here you will find some helpful links and resources for our weekly lab acitivities.
+# Lab 2: X-mas lights with Arduino
+
 
 # Lab 1: Circuits and GPIO Control with Arduino
 
@@ -90,7 +91,7 @@ Let's think about what we need here:
   ```
   digitalWrite(green_LED, LOW);
   ```
-  - Now because our computer is so fast, if we write on and off immediately one after another, we are going to have a problem seeing the on/off action. (Try it out and see what happens!). So, to make it blink at 1 second interval, we can put a time belay between the on-off and the off-on. (Why do you need two delay?). In Arduino, we can use the ```delay()``` command to do this. Within in the function parameters `()`, we specify the delay that we want in milliseconds. So a 1-second delay would mean that you write
+  - Now because our computer is so fast, if we write on and off immediately one after another, we are going to have a problem seeing the on/off action. (Try it out and see what happens!). So, to make it blink at 1 second interval, we can put a time belay between the on-off and the off-on. (Why do you need two delays?). In Arduino, we can use the ```delay()``` command to do this. Within in the function parameters `()`, we specify the delay that we want in milliseconds. So a 1-second delay would mean that you write
   ```
   delay(1000);
   ```
@@ -114,3 +115,77 @@ void loop() {
   delay(1000);              // wait for a second
 }
 ```
+
+### Problem 2: Potentiometer Sensing
+
+So far so good, let's see how we can learn more about potentiometers by sensing their output using and Arduino. Again, let's think about what we need to here:
+
+0. Goal:
+  - Our goal is read the output from the potentiometer and display it on the computer using the Serial Monitor.
+
+1. Global variables:
+  - You need to define two things here, the analog input pin that your Arduino is connected to, and a variable that can store your readings.
+  ```
+  int pot = 0;          // potentiometer connected to pin A0
+  int reading;          // initialize integer variable to store sensor output
+  ```
+
+2. Setup:
+  - Since we want to display our readings on the `Serial Monitor`, we want to make sure to set the language (speed) that we're communiting with between the computer and the Arduino:
+  ```
+  Serial.begin(9600);
+  ```
+  - Analog inputs (pins A0 - A5) DO NOT NEED to be defined in the setup, because unlike GPIO pins, these can only do one thing: reading voltage signals and digitizing it into a number between 0-1023 representing 0-5V.
+
+3. Loop:
+  - Now remember, the main loop is like a round in a boardgame, the same code is being executed over and over and over (never ending) at a very, very high speed. In fact, it's being executed as fast as the Arduino can unless if you tell it wait a little bit here and there using the `delay()` method that we also used with the LEDs.
+  - To read the input on the `A0` pin, we use the `analogRead()` function. Inside the `()`, you are going to put the pin/port that you want to read from. In this case, you stored your pin number in the `pot` variable. So `analogRead(pot)` is going to to give us a number between `0` and `1023`, which means that we need to store this somehow. That where we use the `reading` variable that defined at the very top too.
+  ```
+  reading = analogRead(pot);
+  ```
+  - Next we want to print this number to the Serial monitor, so we use the `Serial.print()` command. Can you guess what the difference is between `Serial.print` and `Serial.println`. Why do we put `"Reading: "` into quatation marks and `pot` not? If you're not sure, try it out and see what happens.
+  ```
+  Serial.print("Reading: ");
+  Serial.println(pot);
+  ```
+  - Now because our computer is so fast, if we don't tell it to wait a little bit, the numbers are gonna change so quickly that it's going to be hard for us to track it. In Arduino, we can use the ```delay()``` command to do this. Within in the function parameters `()`, we specify the delay that we want in **milliseconds**. So a 1-second delay would mean that you write
+  ```
+  delay(1000);
+  ```
+
+  The entire code should look something like shown below. Do not just copy it, but write your own program. Change the pin number to `1`, name your `reading` variable something else, and change the interval (the delays) that you're reading at.
+
+  ```c
+  int pot = 0;
+  int reading;
+
+  void setup() {
+    // put your setup code here, to run once:
+    Serial.begin(9600);
+  }
+
+  void loop() {
+    // put your main code here, to run repeatedly:
+    reading = analogRead(pot);
+    Serial.print("Reading: ");
+    Serial.println(pot);
+
+    delay(1000);
+  }
+  ```
+### Problem 3: Can we combine Potentiomers and LEDs?
+
+How would you combine the LED program and the potentiometer program into a single program? What would you want it to do?
+To give you a possible example, have you every turn a knob that makes a light fade in and out? How do think that works?
+
+**Hint: **<br>
+In Arduino, instead of just turning pins on and off using `digitalWrite(pin, HIGH)` and `digitalWrite(pin, LOW)`, we can actually output anything in between the two. You can do this using the `analogWrite(pin, value)` function, where `pin` is the pin that you're using to connect to the LED, and `value` is a number between `0` and `255`. The higher the number, the closer the output will be to 5V, which is the maximum. So, if you want your LED to light at half the brightness, you could say
+```c
+analogWrite(led_pin, 127);
+```
+Now how can we use this for our project? Discuss with your partner how you want to use the LEDs and Potentiometers togeher.
+
+
+# Introduction
+
+Aloha! Here you will find some helpful links and resources for our weekly lab acitivities.
