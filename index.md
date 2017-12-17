@@ -9,6 +9,10 @@
 
 # Lab 2: X-mas lights with Arduino
 
+Today we will explore some fundamental programming concepts of loops and conditionals and apply them to LED lightings. Using the hardware setup shown below, how can you arrange and control them in your own way?
+
+![LED schematic](images/lab2/lab2_12led_breadboard.png)
+
 
 # Lab 1: Circuits and GPIO Control with Arduino
 
