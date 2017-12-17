@@ -162,6 +162,13 @@ void loop() {
 }
 ```
 
+## Coding with loops
+
+What do you think we mean by coding with loops? What kind of programming loops have you heard of so far?
+
+The first loop that we will look at is the while lop. A while loop allows you to run a set of instructions while some condition is met. You can apply this type of logic to many situations in your personal life too. For example, `while you're learning programming, you have to be very patient and pay attention to every little comma, semicolon, and parentheses`, `while driving, you are not allowed to use a phone`.
+
+In programming, we can apply the same idea. 
 
 # Lab 1: Circuits and GPIO Control with Arduino
 
