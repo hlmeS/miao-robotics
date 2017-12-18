@@ -1,6 +1,6 @@
 /* 
  *  
- *  Title: X-Mas Lights, Version 1
+ *  Title: X-Mas Lights, For Loop
  *  Objective: Control multiple LEDs
  */
 
@@ -11,7 +11,7 @@ void setup() {
   Serial.begin(9600);
 
   // set the pins as output pins
-  for (pin=2; pin < 14, pin++) { 
+  for (pin=2; pin < 14; pin++) { 
     pinMode(pin, OUTPUT);    
   }
 }
@@ -20,7 +20,7 @@ void loop() {
   // blink all twelve at the same time
 
   // blink on
-  for (pin=2; pin < 14, pin++) { 
+  for (pin=2; pin < 14; pin++) { 
     digitalWrite(pin, HIGH); 
   }
 
@@ -28,14 +28,13 @@ void loop() {
   delay(100); 
 
   // blink off
-  for (pin=2; pin < 14, pin++) { 
+  for (pin=2; pin < 14; pin++) { 
     digitalWrite(pin, LOW);
   }
   
   
   // turn led's on/off in a row with 100 millisecond interval
-  pin = 2;
-  for (pin=2; pin < 14, pin++) { 
+  for (pin=2; pin < 14; pin++) { 
     digitalWrite(pin, HIGH);
     delay(100); 
     digitalWrite(pin, LOW);

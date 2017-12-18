@@ -1,6 +1,6 @@
 /* 
  *  
- *  Title: X-Mas Lights, Version 1
+ *  Title: X-Mas Lights, While Loop
  *  Objective: Control multiple LEDs
  */
 
