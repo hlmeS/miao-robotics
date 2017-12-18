@@ -172,8 +172,8 @@ The first loop that we will look at is the while lop. A while loop allows you to
 In programming, we can apply the same idea. For example, while some pin variable is less than 14 (`while (pin < 14)`), turn pin on (`digitalWrite(pin, HIGH)`). Then we just need make sure to update our pin variable in the loop by 1 (`pin = pin + 1` or `pin += 1`). In the code below, you can see how the `void setup()` loop and the `void loop()` loop become so much easier to type.
 
 **Make sure to change the code to also do the following:**
-- Turn one led on an doff at a time starting at pin 2 and going up to pin 14
-- Turn one led on and of at a time starting with pin 13 and going down to 2
+- Turn one led on and off at a time starting at pin 2 and going up to pin 14
+- Turn one led on and off at a time starting with pin 13 and going down to 2
 - Try and come up with some other examples on your own.
 
 ```c
