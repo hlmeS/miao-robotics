@@ -15,7 +15,7 @@ Today we will explore some fundamental programming concepts of loops and conditi
 
 ## Coding without loops
 
-Imagine you want to control all 12 LEDs that you have wired up. Can you guess how much typing it would take to control each one using just basic coding that we used last time? Well, take a look at the code below, copy it to your Arduino IDE, and then try adding to it to make the LED's blink backwards from 12 to 1. What do you think, is there an easier way? How would make this program better?
+Imagine you want to control all 12 LEDs that you have wired up. Can you guess how much typing it would take to control each one using just basic coding that we used last time? Well, take a look at the code below, copy it to your Arduino IDE, and then try adding to it to make the LED's blink backwards from 12 to 1. What do you think, is there an easier way? How would you make this program better?
 
 ```c
 int led_1 = 2;
@@ -167,9 +167,9 @@ void loop() {
 What do you think we mean by coding with loops? What kind of programming loops have you heard of so far?
 
 ### While Loop
-The first loop that we will look at is the while lop. A while loop allows you to run a set of instructions while some condition is met. You can apply this type of logic to many situations in your personal life too. For example, `while you're learning programming, you have to be very patient and pay attention to every little comma, semicolon, and parentheses`, `while driving, you are not allowed to use a phone`.
+The first loop that we will look at is the while lop. A while loop allows you to run a set of instructions while some condition is met. You can apply this type of logic to many situations in your personal life too. For example, `while you're learning programming, you have to be very patient and pay attention to every little comma, semicolon, and parentheses`, or as you know, `while driving, you are not allowed to text on a phone`.
 
-In programming, we can apply the same idea. For example, while some variable is less than 14 (`while (pin < 14)`), turn pin on (`digitalWrite(pin, HIGH)`). Then we just need make sure to update out pin variable in the loop by 1 (`pin = pin + 1` or `pin += 1`). In the code below, you can see how the `void setup()` loop and the main loop because so much easier to type.
+In programming, we can apply the same idea. For example, while some pin variable is less than 14 (`while (pin < 14)`), turn pin on (`digitalWrite(pin, HIGH)`). Then we just need make sure to update our pin variable in the loop by 1 (`pin = pin + 1` or `pin += 1`). In the code below, you can see how the `void setup()` loop and the `void loop()` loop become so much easier to type.
 
 **Make sure to change the code to also do the following:**
 - Turn one led on an doff at a time starting at pin 2 and going up to pin 14
