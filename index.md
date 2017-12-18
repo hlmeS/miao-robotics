@@ -174,7 +174,7 @@ In programming, we can apply the same idea. For example, while some variable is 
 **Make sure to change the code to also do the following:**
 - Turn one led on an doff at a time starting at pin 2 and going up to pin 14
 - Turn one led on and of at a time starting with pin 13 and going down to 2
-- Try and come up with some other examples on your own. 
+- Try and come up with some other examples on your own.
 
 ```c
 int pin;
@@ -223,6 +223,67 @@ void loop() {
   // what else can you come up with?
 }
 ```
+
+### For Loop
+
+Awesome, now we know how to save time on typing so many lines of code and get things done faster. The next type of loop that we're going to look at is a for loop, which is really just a special case of the whle loop. Remember that in the while loop, we alway had to update our pin variable in each loop. With the for loop we don't need to do that because we can tell the computer in advance how many time you want to execute something.
+
+In some cultures like spain, you eat 12 grapes in the last twelve seconds of the year. So you could say `For the next 12 seconds, starting with 1 and ending with 12, you need to eat one grape per second.`
+
+Let's see how this helps with the code above.
+
+```c
+/*
+ *
+ *  Title: X-Mas Lights, Version 1
+ *  Objective: Control multiple LEDs
+ */
+
+int pin;
+
+void setup() {
+  // set communication with the computer
+  Serial.begin(9600);
+
+  // set the pins as output pins
+  for (pin=2; pin < 14, pin++) {
+    pinMode(pin, OUTPUT);
+  }
+}
+
+void loop() {
+  // blink all twelve at the same time
+
+  // blink on
+  for (pin=2; pin < 14, pin++) {
+    digitalWrite(pin, HIGH);
+  }
+
+  // wait
+  delay(100);
+
+  // blink off
+  for (pin=2; pin < 14, pin++) {
+    digitalWrite(pin, LOW);
+  }
+
+
+  // turn led's on/off in a row with 100 millisecond interval
+  pin = 2;
+  for (pin=2; pin < 14, pin++) {
+    digitalWrite(pin, HIGH);
+    delay(100);
+    digitalWrite(pin, LOW);
+  }
+
+  // wow  ... so much less typing
+  // can you make it go backwards from 12 to 1?
+
+  // what else can you come up with? 
+}
+
+```
+
 
 # Lab 1: Circuits and GPIO Control with Arduino
 
