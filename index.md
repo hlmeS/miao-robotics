@@ -230,15 +230,20 @@ Awesome, now we know how to save time on typing so many lines of code and get th
 
 In some cultures like spain, you eat 12 grapes in the last twelve seconds of the year. So you could say `For the next 12 seconds, starting with 1 and ending with 12, you need to eat one grape per second.`
 
+A for loop looks basically like shown below, the block in the curly braces `{}` get's repeated and the content in the parentheses `()` after the word `for` defines how often to loop and what the counter variable should be called. The first part `pin=2` means that we start with pin being equal to 2. Then we define that our `pin` counter should be less than `14` by saying (`pin < 14`), and we say that the `pin` counter should increase by `1` for every iteration. If you wanted it to increase by two, you could say `pin+=2`.
+
+
+```c
+for (pin=2; pin < 14; pin++) {
+  digitalWrite(pin, HIGH);
+  delay(100);
+  digtalWrite(pin, OFF);
+}
+```
+
 Let's see how this helps with the code above.
 
 ```c
-/*
- *
- *  Title: X-Mas Lights, Version 1
- *  Objective: Control multiple LEDs
- */
-
 int pin;
 
 void setup() {
@@ -246,7 +251,7 @@ void setup() {
   Serial.begin(9600);
 
   // set the pins as output pins
-  for (pin=2; pin < 14, pin++) {
+  for (pin=2; pin < 14; pin++) {
     pinMode(pin, OUTPUT);
   }
 }
@@ -255,7 +260,7 @@ void loop() {
   // blink all twelve at the same time
 
   // blink on
-  for (pin=2; pin < 14, pin++) {
+  for (pin=2; pin < 14; pin++) {
     digitalWrite(pin, HIGH);
   }
 
@@ -263,14 +268,13 @@ void loop() {
   delay(100);
 
   // blink off
-  for (pin=2; pin < 14, pin++) {
+  for (pin=2; pin < 14; pin++) {
     digitalWrite(pin, LOW);
   }
 
 
   // turn led's on/off in a row with 100 millisecond interval
-  pin = 2;
-  for (pin=2; pin < 14, pin++) {
+  for (pin=2; pin < 14; pin++) {
     digitalWrite(pin, HIGH);
     delay(100);
     digitalWrite(pin, LOW);
@@ -279,7 +283,7 @@ void loop() {
   // wow  ... so much less typing
   // can you make it go backwards from 12 to 1?
 
-  // what else can you come up with? 
+  // what else can you come up with?
 }
 
 ```
