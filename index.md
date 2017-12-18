@@ -166,9 +166,63 @@ void loop() {
 
 What do you think we mean by coding with loops? What kind of programming loops have you heard of so far?
 
+### While Loop
 The first loop that we will look at is the while lop. A while loop allows you to run a set of instructions while some condition is met. You can apply this type of logic to many situations in your personal life too. For example, `while you're learning programming, you have to be very patient and pay attention to every little comma, semicolon, and parentheses`, `while driving, you are not allowed to use a phone`.
 
-In programming, we can apply the same idea. 
+In programming, we can apply the same idea. For example, while some variable is less than 14 (`while (pin < 14)`), turn pin on (`digitalWrite(pin, HIGH)`). Then we just need make sure to update out pin variable in the loop by 1 (`pin = pin + 1` or `pin += 1`). In the code below, you can see how the `void setup()` loop and the main loop because so much easier to type.
+
+**Make sure to change the code to also do the following:**
+- Turn one led on an doff at a time starting at pin 2 and going up to pin 14
+- Turn one led on and of at a time starting with pin 13 and going down to 2
+- Try and come up with some other examples on your own. 
+
+```c
+int pin;
+
+void setup() {
+  // set communication with the computer
+  Serial.begin(9600);
+
+  // set the pins as output pins
+  pin = 2;
+  while (pin < 14) {
+    pinMode(pin, OUTPUT);
+    pin = pin + 1;
+
+  }
+}
+
+void loop() {
+  // blink all twelve at the same time
+
+  // blink on
+  pin = 2;
+  while (pin < 14) {
+    digitalWrite(pin, HIGH);
+    pin = pin + 1;
+  }
+
+  // wait
+  delay(100);
+
+  // blink off
+  pin = 2;
+  while (pin < 14) {
+    digitalWrite(pin, LOW);
+    pin = pin + 1;
+  }
+
+
+  // turn led's on/off in a row with 100 millisecond interval
+  // How can you make one led at a time turn on and off using a while loop?
+
+  // wow  ... so much less typing
+
+  // can you make it go backwards from 12 to 1?
+
+  // what else can you come up with?
+}
+```
 
 # Lab 1: Circuits and GPIO Control with Arduino
 
