@@ -19,6 +19,7 @@ To try this out, go to [http://www.color-hex.com/color/](http://www.color-hex.co
 
 ## Coding the NeoPixel
 
+**Adding the NeoPixel Library**
 Before we can get started with the actual coding, we need to install a library that makes it easier to control the NeoPixel. An Arduino library is a set of functions, tools, that make your life easier.
 
 To install the NeoPixel library, go to `Manage Libraries` and search for `NeoPixel`. You should see the Adafruit NeoPixel library as shown in the images below.
@@ -27,7 +28,12 @@ To install the NeoPixel library, go to `Manage Libraries` and search for `NeoPix
 
 ![NeoPixel Library 2](images/lab3/neo_add_library2.png)
 
+**Running the Example Code**
+To get started and see how to use the `NeoPixel library`, we are going to look at the `simple` example program, as shown in the two images below. You want to make sure to change the number highlighted in yellow to match the pin that you're connected on the Arduino, and the number of LED's on your `NeoPixel`.
 
+![simple code 1](images/lab3/simple_1.png)
+
+![simple code 2](images/lab3/simple_2.png)
 
 # Lab 2: X-mas lights with Arduino
 
