@@ -7,6 +7,28 @@
   - [Lab 2: X-mas lights with Arduino](#lab-2-x-mas-lights-with-arduino)
 
 
+# Lab 3: X-mas lights with Arduino, Part II
+
+In the previous lab, we looked at using multiple LEDs and explored the concept of while and for loops to make our coding life easier. We saw that the for-loop is really just a special case of the while loop that's great when we know how many times we want to run the loop.
+
+Today, we will continue with control loops and will also look at using the [NeoPixel](https://www.adafruit.com/category/168) RGB LED strip. RGB LEDs are special LEDs because they can light in red, green, and blue at the same time. We can either only display one color, or a combination of two or three colors. By mixing the red, gree, and blue color intensitie, we can in fact create any color we want. We can represent the intensity of each color using a number between 0 and 255.
+
+To try this out, go to [http://www.color-hex.com/color/](http://www.color-hex.com/color/), and type `rgb(71, 178, 67)` into the input box. Which color will this give you? Try generating 3-5 interesting colors and right down their `rgb()` values.
+
+## Connecting the NeoPixel
+
+## Coding the NeoPixel
+
+Before we can get started with the actual coding, we need to install a library that makes it easier to control the NeoPixel. An Arduino library is a set of functions, tools, that make your life easier.
+
+To install the NeoPixel library, go to `Manage Libraries` and search for `NeoPixel`. You should see the Adafruit NeoPixel library as shown in the images below.
+
+![NeoPixel Library 1](images/lab3/neo_add_library1.png)
+
+![NeoPixel Library 2](images/lab3/neo_add_library2.png)
+
+
+
 # Lab 2: X-mas lights with Arduino
 
 Today we will explore some fundamental programming concepts of loops and conditionals and apply them to LED lightings. Using the hardware setup shown below, how can you arrange and control them in your own way?
