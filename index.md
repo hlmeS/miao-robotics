@@ -75,9 +75,9 @@ Now that you know how to connect the NeoPixel, and how to set the color of each 
 
 Here are some inspirations for you:
 
--[Exmaples](https://www.youtube.com/watch?v=POV-qvEx1ws)
--[Outdoor lights](https://www.youtube.com/watch?annotation_id=annotation_581560751&feature=iv&src_vid=IXbUM5VZqX8&v=YKY-t6-V_8E)
--[Ping Pong Balls](https://www.youtube.com/watch?v=XTa9Qhpohms)
+- [Exmaples](https://www.youtube.com/watch?v=POV-qvEx1ws)
+- [Outdoor lights](https://www.youtube.com/watch?annotation_id=annotation_581560751&feature=iv&src_vid=IXbUM5VZqX8&v=YKY-t6-V_8E)
+- [Ping Pong Balls](https://www.youtube.com/watch?v=XTa9Qhpohms)
 
 # Lab 2: X-mas lights with Arduino
 
