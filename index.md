@@ -17,6 +17,11 @@ To try this out, go to [http://www.color-hex.com/color/](http://www.color-hex.co
 
 ## Connecting the NeoPixel
 
+The NeoPixel has three pins: `5V`, `GND`, and `SIGNAL`. You can connect them to your Arduino as shown below using any of the 13 digital pin on the Arduino. Because of the large number of LED's, it is better to connect `5V` and `GND` from an external `5V` supply, if available. Why do you think that is?
+
+![Arduino to NeoPixel](images/lab3/uno-neopixels.png)
+
+
 ## Coding the NeoPixel
 
 **Adding the NeoPixel Library**
@@ -34,6 +39,45 @@ To get started and see how to use the `NeoPixel library`, we are going to look a
 ![simple code 1](images/lab3/simple_1.png)
 
 ![simple code 2](images/lab3/simple_2.png)
+
+**How does the Example Code Work?**
+
+Looking at the `void loop()` program, how is the NeoPixel being controlled? Ask yourself the following,
+1. How is each pin being addressed?
+2. How do we set the color of each pin?
+
+Here is the reference code:
+```c
+void loop() {
+
+  // For a set of NeoPixels the first NeoPixel is 0, second is 1, all the way up to the count of pixels minus one.
+
+  for(int i=0;i<NUMPIXELS;i++){
+
+    // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
+    pixels.setPixelColor(i, pixels.Color(0,150,0)); // Moderately bright green color.
+
+    pixels.show(); // This sends the updated pixel color to the hardware.
+
+    delay(delayval); // Delay for a period of time (in milliseconds).
+
+  }
+}
+```
+
+Ok, so the first thing to notice here is the for loop. Using the for loop and naming our counter variable `i`, we can easily address each LED `i` when running the loop. <br>
+Next, we see that we can set the color of each pixel using the `pixels.setPixelColor()` command. This one takes two arguments: the led number `i` and the RGB color `pixels.Color(0,150,0)`. You can change the the three numbers to change the color. <br>
+In order to update the LED, we say `pixels.show()`. What does the delay do here? Experiment with it by changing it and observing the behavior.
+
+**Your Turn: Create your Own Christmas Lights**
+
+Now that you know how to connect the NeoPixel, and how to set the color of each LED using for loops, what patterns can you come up with?
+
+Here are some inspirations for you:
+
+-[Exmaples](https://www.youtube.com/watch?v=POV-qvEx1ws)
+-[Outdoor lights](https://www.youtube.com/watch?annotation_id=annotation_581560751&feature=iv&src_vid=IXbUM5VZqX8&v=YKY-t6-V_8E)
+-[Ping Pong Balls](https://www.youtube.com/watch?v=XTa9Qhpohms)
 
 # Lab 2: X-mas lights with Arduino
 
