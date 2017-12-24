@@ -5,26 +5,26 @@
 - Lab Activities
   - [Lab 1: Circuits and GPIO Control with Arduino](#lab-1-circuits-and-gpio-control-with-arduino)
   - [Lab 2: X-mas lights with Arduino](#lab-2-x-mas-lights-with-arduino)
-
+  - [Lab 3: X-mas lights with Arduino, Part 2](#lab-2-x-mas-lights-with-arduino-part-ii)
 
 # Lab 3: X-mas lights with Arduino, Part II
 
-In the previous lab, we looked at using multiple LEDs and explored the concept of while and for loops to make our coding life easier. We saw that the for-loop is really just a special case of the while loop that's great when we know how many times we want to run the loop.
+In the previous lab, we looked at using multiple LEDs and explored the concept of `while` and `for` loops to make our coding life easier. We saw that the for-loop is really just a special case of the while loop that's great when we know how many times we want to run the loop.
 
-Today, we will continue with control loops and will also look at using the [NeoPixel](https://www.adafruit.com/category/168) RGB LED strip. RGB LEDs are special LEDs because they can light in red, green, and blue at the same time. We can either only display one color, or a combination of two or three colors. By mixing the red, gree, and blue color intensitie, we can in fact create any color we want. We can represent the intensity of each color using a number between 0 and 255.
+Today, we will continue with control loops and will also look at using the [NeoPixel](https://www.adafruit.com/category/168) RGB LED strip. RGB LEDs are special LEDs because they can light in red, green, and blue at the same time. We can either only display one color, or a combination of two or three colors. By mixing the red, green, and blue color intensities, we can in fact create any color we want. We can represent the intensity of each color using a number between 0 and 255.
 
-To try this out, go to [http://www.color-hex.com/color/](http://www.color-hex.com/color/), and type `rgb(71, 178, 67)` into the input box. Which color will this give you? Try generating 3-5 interesting colors and right down their `rgb()` values.
+To try this out, go to [http://www.color-hex.com/color/](http://www.color-hex.com/color/), and type `rgb(71, 178, 67)` into the input box. Which color will this give you? Try generating 3-5 interesting colors and write down their `rgb()` values.
 
 ## Connecting the NeoPixel
 
-The NeoPixel has three pins: `5V`, `GND`, and `SIGNAL`. You can connect them to your Arduino as shown below using any of the 13 digital pin on the Arduino. Because of the large number of LED's, it is better to connect `5V` and `GND` from an external `5V` supply, if available. Why do you think that is?
+The NeoPixel has three pins: `5V`, `GND`, and `SIGNAL`. You can connect them to your Arduino as shown below using any of the 13 digital pin on the Arduino for your `SIGNAL` pin. Because of the large number of LED's, it is better to connect `5V` and `GND` from an external `5V` supply, if available. Why do you think that is?
 
 ![Arduino to NeoPixel](images/lab3/uno-neopixels.png)
 
 
 ## Coding the NeoPixel
 
-**Adding the NeoPixel Library**
+**Adding the NeoPixel Library**<br>
 Before we can get started with the actual coding, we need to install a library that makes it easier to control the NeoPixel. An Arduino library is a set of functions, tools, that make your life easier.
 
 To install the NeoPixel library, go to `Manage Libraries` and search for `NeoPixel`. You should see the Adafruit NeoPixel library as shown in the images below.
@@ -33,14 +33,14 @@ To install the NeoPixel library, go to `Manage Libraries` and search for `NeoPix
 
 ![NeoPixel Library 2](images/lab3/neo_add_library2.png)
 
-**Running the Example Code**
-To get started and see how to use the `NeoPixel library`, we are going to look at the `simple` example program, as shown in the two images below. You want to make sure to change the number highlighted in yellow to match the pin that you're connected on the Arduino, and the number of LED's on your `NeoPixel`.
+**Running the Example Code**<br>
+To get started and see how to use the `NeoPixel library`, we are going to look at the `simple` example program, as shown in the two images below. You want to make sure to change the number highlighted in yellow to match the pin that you're connected to on the Arduino, and the number of LED's on your `NeoPixel`.
 
 ![simple code 1](images/lab3/simple_1.png)
 
 ![simple code 2](images/lab3/simple_2.png)
 
-**How does the Example Code Work?**
+**How does the Example Code Work?**<br>
 
 Looking at the `void loop()` program, how is the NeoPixel being controlled? Ask yourself the following,
 1. How is each pin being addressed?
