@@ -8,12 +8,34 @@
   - [Lab 3: X-mas lights with Arduino, Part 2](#lab-2-x-mas-lights-with-arduino-part-ii)
   - [Lab 4: Assemble Your Kit](#lab-4-assemble-your-kit)
 
+
 # Lab 5: Tools and Workflow
 
 MAIN TOOLS AND WORKFLOW MOTIVATION
 
 In most of your upcoming assignments, we have chosen to use what we as a commercial laboratory have found most useful in creating real commercial projects. These tools combine areas of coding with electronics in order to create hardware solutions from robotics to distributed sensors and even big data.
 	What we have found is that there are two main hardware components which are essential to creating
+
+# Lab 4: Homework
+
+## Explore C program creation and compilation.
+
+**Task:**
+
+Given the time an object falls,in seconds, compute the velocity of the object when it hits the ground using: <br>
+`velocity = g * time`
+
+and the distance it fell using:  <br>
+`distance = g * t * t / 2`
+
+**Use the arduino to accomplish your task.**
+
+You will just use a static float assignment to enter the time like this: <br>
+
+`	float time = 2.3;`
+
+Or whatever time is required
+
 
 # Lab 4: Assemble Your Kit
 
