@@ -7,6 +7,33 @@
   - [Lab 2: X-mas lights with Arduino](#lab-2-x-mas-lights-with-arduino)
   - [Lab 3: X-mas lights with Arduino, Part 2](#lab-2-x-mas-lights-with-arduino-part-ii)
 
+# Lab 4: Assemble Your Kit
+
+## LABORATORY NOTEBOOK
+
+A lab notebook is one of the most important tools you will have in your journey into programming and electronics. Keeping good notes will save you time and trouble. The lab notebook is where you will write down important information about your projects. Many times, you will have a problem that will need to be solved in electronics or programming which is very similar to one you had already solved before. If it has been a while since you solved the problem the last time, you might not remember exactly how you did it. This is where your lab notebook comes in handy.
+As you write your lab notebook, keep this at the forefront of your mind when you take notes. Think about all of the effort you took to solve this problem that you are currently facing and how you wouldn’t have to go through all that effort again if you come across it next time. You will be tempted to cut corners thinking that you will remember and don’t need to write it all down but in time you will see when you are looking back through your notes what you need and what you don’t need.
+The other use for a lab notebook is for others to look at and figure out what you did. A good lab notebook will be able to convey all of the information about a project in a way that others would be able to follow it and repeat what you did.
+
+
+## PROJECT ASSIGNMENT
+
+Each of you will be given a laboratory notebook. It will be your job to keep good notes in your notebook so that it can help you to complete your tasks. We are going with pencil and paper, but there are other tools like Microsoft OneNote that you can use which you can cut and paste screenshots, code, and other images into. Start with pen and paper. You can move to something digital later when you feel comfortable with the process. Oftentimes, even with a digital notebook, I still keep the handy pen and paper around.
+
+Write your name on the notebook cover and put the date it was started
+Reserve the first 3 pages for the table of contents...label the top of the page as table of contents
+Number the pages in the upper right hand corner so you can quickly find where the information in your notebook is
+
+## GENERAL FORMAT
+
+Title at top of page
+Description of the project objectives
+Any problems that you encountered and how you fixed it
+Results of the project
+Instructions about how to use the products you created in your project
+Create a table of contents entry in the front of your notebook
+
+
 # Lab 3: X-mas lights with Arduino, Part II
 
 In the previous lab, we looked at using multiple LEDs and explored the concept of `while` and `for` loops to make our coding life easier. We saw that the for-loop is really just a special case of the while loop that's great when we know how many times we want to run the loop.
