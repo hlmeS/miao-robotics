@@ -8,6 +8,13 @@
   - [Lab 3: X-mas lights with Arduino, Part 2](#lab-2-x-mas-lights-with-arduino-part-ii)
   - [Lab 4: Assemble Your Kit](#lab-4-assemble-your-kit)
 
+# Lab 5: Tools and Workflow
+
+MAIN TOOLS AND WORKFLOW MOTIVATION
+
+In most of your upcoming assignments, we have chosen to use what we as a commercial laboratory have found most useful in creating real commercial projects. These tools combine areas of coding with electronics in order to create hardware solutions from robotics to distributed sensors and even big data.
+	What we have found is that there are two main hardware components which are essential to creating
+
 # Lab 4: Assemble Your Kit
 
 ## LABORATORY NOTEBOOK
