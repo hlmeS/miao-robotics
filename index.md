@@ -6,6 +6,7 @@
   - [Lab 1: Circuits and GPIO Control with Arduino](#lab-1-circuits-and-gpio-control-with-arduino)
   - [Lab 2: X-mas lights with Arduino](#lab-2-x-mas-lights-with-arduino)
   - [Lab 3: X-mas lights with Arduino, Part 2](#lab-2-x-mas-lights-with-arduino-part-ii)
+  - [Lab 4: Assemble Your Kit](#lab-4-assemble-your-kit)
 
 # Lab 4: Assemble Your Kit
 
