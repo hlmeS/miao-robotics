@@ -9,6 +9,23 @@
   - [Lab 4: Assemble Your Kit](#lab-4-assemble-your-kit)
 
 
+# Lab 6
+
+## SERIAL COMMUNICATION AND IF STATEMENTS
+
+When working with any device, it is very important to consider how you will interact with it. Will it require human input? Will it need to communicate with another device. In this laboratory we will learn the basics of Serial communication which is the primary means that we will be communicating with our Arduinos for the rest of the activities.
+
+First we need to cover some background about types. In many programming languages including the C programming language whenever you create and declare a variable, you need to specify the type of variable that you will be using.
+
+|Type   |Description    | Code  |
+|---|---|---|
+| Integer  | A positive or negative whole number  | int <variable name>  |
+| float  | A decimal representation of a number  | float <variable name>  |
+| char  | Any character   | char <variable name>  |
+| String  |A string of characters   |String “<variable name>”   |
+
+In this lab we will continue from the homework assignment that you had completed from last night. Now we will add the portion for a human input. We will be using
+
 # Lab 5: Tools and Workflow
 
 ## MAIN TOOLS AND WORKFLOW MOTIVATION
