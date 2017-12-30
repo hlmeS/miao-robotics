@@ -11,10 +11,86 @@
 
 # Lab 5: Tools and Workflow
 
-MAIN TOOLS AND WORKFLOW MOTIVATION
+## MAIN TOOLS AND WORKFLOW MOTIVATION
 
 In most of your upcoming assignments, we have chosen to use what we as a commercial laboratory have found most useful in creating real commercial projects. These tools combine areas of coding with electronics in order to create hardware solutions from robotics to distributed sensors and even big data.
-	What we have found is that there are two main hardware components which are essential to creating
+
+What we have found is that there are two main hardware components which are essential to creating effective devices. These are the single board computer (SBC) and the microcontroller (MCU).  The SBC is an entire computer in a small board. It contains a whole operating system which makes it easy to connect to the internet and communicate with using various networking methods. It is also good at adding visualization and serving as a hub for your devices needs. It is not so good at controlling pins directly or real time controls because it requires a lot of overhead for the operating system processes. For this reason we use an MCU which is a bit harder to program but it is very good at fast operations which require real time actions.
+
+The single board computer will be your Raspberry PI.
+
+In this exercise we will learn how to install the operating system onto the raspberry pi. This will serve us later when we start using the device.
+Use the documentation from the Raspberry PI organization to install Raspbian Jessie with desktop onto an SD card. This SD card will hold the operating system for the Raspberry PI.
+
+https://www.raspberrypi.org/documentation/installation/installing-images/
+
+INSTALLING OPERATING SYSTEM IMAGES
+This resource explains how to install a Raspberry Pi operating system image on an SD card. You will need another computer with an SD card reader to install the image.
+We recommend most users download NOOBS, which is designed to be very easy to use. However, more advanced users looking to install a particular image should use this guide.
+
+**Download the image**
+
+Official images for recommended operating systems are available to download from the Raspberry Pi website Downloads page.
+Alternative distributions are available from third-party vendors.
+If you're not using Etcher (see below), you'll need to unzip .zip downloads to get the image file (.img) to write to your SD card.
+Note: the Raspbian with PIXEL image contained in the ZIP archive is over 4GB in size and uses the ZIP64 format. To uncompress the archive, a unzip tool that supports ZIP64 is required. The following zip tools support ZIP64:
+
+- 7-Zip (Windows)
+- The Unarchiver (Mac)
+- Unzip (Linux)
+
+**Writing an image to the SD card**
+You will need to use an image writing tool to install the image you have downloaded on your SD card.
+Etcher is a graphical SD card writing tool that works on Mac OS, Linux and Windows, and is the easiest option for most users. Etcher also supports writing images directly from the zip file, without any unzipping required. To write your image with Etcher:
+Download Etcher and install it.
+Connect an SD card reader with the SD card inside.
+Open Etcher and select from your hard drive the Raspberry Pi .img or .zip file you wish to write to the SD card.
+Select the SD card you wish to write your image to.
+Review your selections and click 'Flash!' to begin writing data to the SD card.
+
+After installing Jessie into the PI place the completed SD card into the device as shown.
+
+Now the device is a complete linux computer. Attach a screen via HDMI and a keyboard and mouse and you are ready to start programming!!! Next we move onto the Arduino which will be the majority of the beginning lessons in programming.
+
+
+## ASSEMBLE YOUR NANO
+
+We will be following the tutorial on soldering your MCU together from the instructables page:
+http://www.instructables.com/id/Solder-Arduino-Header-Pins-Easily/
+
+While I have seen and tried many methods of soldering header pins, this is the most basic, yet best way to solder them. Feel free to adapt, modify, or add to this method in any way. :)
+
+Materials required:
+- Header pins
+- Breadboard (Tip: Do not use this a bread cutting board. Don't ask.)
+- Tinned soldering iron
+- Solder
+- Flux Pen (Optional, or use regular flux)
+- Helping hands/magnifying glass (Optional)
+- Patience (Not optional)
+
+That's it, be prepared to have your mind blown in a very simplistic way.
+
+### Step 1: Set Up and Flux
+
+Carefully dump the contents of what you want to solder onto a soft surface. Picking out the header pin from the pile, place them into the breadboard apart the width of your PCB. For my Arduino nano it was 3 slots, plus the middle gap. The next step is to flux the pins and the board, while this is completely optional I would recommend it.
+
+### Step 2: Solder
+
+This is fairly self explanatory, but place the soldering iron on one side of the pin, and the solder on the other. once the pin has warmed up for a second or two, the solder will melt and wick around the pin and the board. If this is not happening there are several possible causes:
+Tip not tinned properly
+Tip is baked (A soldering iron should not be left on for long periods, a replacement is required)
+The iron is not getting hot enough
+Solder is not meant for electrical.
+
+### Step 3: Soldering the Pins on Reverse
+
+This step is a bit tricky, but once one or two pins are soldered it becomes much easier. Not it will be different for every board, but you have to make sure your board is flat and lined up with the pins. Arduino nano boards have mini usb on the top, so when soldering the back you have to make sure it does not interfere. To do so pull the pins slightly out from the breadboard until the gap is bridged. See the photos for better explanation.
+
+### Step 4: Good Job!
+
+Good job! You just soldered your first (Maybe) set of header pins. Will I have done this more than a few times, I am no where near a professional, in fact I am somewhat of an amateur. So If I can do it, so can you. It takes around 5 minutes, so go for it!
+
 
 # Lab 4: Homework
 
