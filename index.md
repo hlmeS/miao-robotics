@@ -7,11 +7,10 @@
   - [Lab 2: X-mas lights with Arduino](#lab-2-x-mas-lights-with-arduino)
   - [Lab 3: X-mas lights with Arduino, Part 2](#lab-2-x-mas-lights-with-arduino-part-ii)
   - [Lab 4: Assemble Your Kit](#lab-4-assemble-your-kit)
+  - [Lab 5: Seriasl Communication and IF Statement](#lab-5-serial-communication-and-if-statements)
 
 
-# Lab 6
-
-## SERIAL COMMUNICATION AND IF STATEMENTS
+# Lab 5: Serial Communication and IF Statements
 
 When working with any device, it is very important to consider how you will interact with it. Will it require human input? Will it need to communicate with another device. In this laboratory we will learn the basics of Serial communication which is the primary means that we will be communicating with our Arduinos for the rest of the activities.
 
@@ -24,9 +23,89 @@ First we need to cover some background about types. In many programming language
 | char  | Any character   | char <variable name>  |
 | String  |A string of characters   |String “<variable name>”   |
 
-In this lab we will continue from the homework assignment that you had completed from last night. Now we will add the portion for a human input. We will be using
+In this lab we will continue from the homework assignment that you had completed from last night. Now we will add the portion for a human input. We will be using the serial monitor on the Arduino IDE program to input a string to your program and use the input for processing.
 
-# Lab 5: Tools and Workflow
+In your program, you used:
+
+```c
+float t = <number of seconds>;
+```
+
+We will be using the following two commands to enable you to receive data from the Serial Monitor. We will briefly cover If statements and you will use them for homework assignments.
+
+We will use this command to receive Serial Communications from the serial monitor.
+
+https://www.arduino.cc/en/Serial/ReadString
+
+Input from the Serial monitor will come in as a string, we want to convert it to a float using this command
+
+https://www.arduino.cc/en/Tutorial/StringToFloatExample
+In our exercise we will now use the serial monitor to input time into your program and have it process and give you an output.
+
+
+## HOMEWORK
+
+For your homework read the instructions on IF statements:
+
+https://www.arduino.cc/reference/en/language/structure/control-structure/if/
+
+Use an if statement to tell you YES as an output on your serial monitor. if your speed after falling is over 120 meters/second and NO if it is not.
+
+## ADVANCED
+
+We will give you several LEDs. Use the DigitalWrite function:
+
+https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/
+
+Using the LEDS create a program that will take a time input in seconds and light up a specific number of LEDS depending on how fast you are travelling after falling. More LEDs if you are falling faster. Use the same LED circuit set up as in Lab 2.
+
+# Lab 4: Homework
+
+## Explore C program creation and compilation.
+
+**Task:**
+
+Given the time an object falls,in seconds, compute the velocity of the object when it hits the ground using: <br>
+`velocity = g * time`
+
+and the distance it fell using:  <br>
+`distance = g * t * t / 2`
+
+**Use the arduino to accomplish your task.**
+
+You will just use a static float assignment to enter the time like this: <br>
+
+`	float time = 2.3;`
+
+Or whatever time is required
+
+
+# Lab 4: Assemble Your Kit
+
+
+## LABORATORY NOTEBOOK
+
+A lab notebook is one of the most important tools you will have in your journey into programming and electronics. Keeping good notes will save you time and trouble. The lab notebook is where you will write down important information about your projects. Many times, you will have a problem that will need to be solved in electronics or programming which is very similar to one you had already solved before. If it has been a while since you solved the problem the last time, you might not remember exactly how you did it. This is where your lab notebook comes in handy.
+As you write your lab notebook, keep this at the forefront of your mind when you take notes. Think about all of the effort you took to solve this problem that you are currently facing and how you wouldn’t have to go through all that effort again if you come across it next time. You will be tempted to cut corners thinking that you will remember and don’t need to write it all down but in time you will see when you are looking back through your notes what you need and what you don’t need.
+The other use for a lab notebook is for others to look at and figure out what you did. A good lab notebook will be able to convey all of the information about a project in a way that others would be able to follow it and repeat what you did.
+
+
+## PROJECT ASSIGNMENT
+
+Each of you will be given a laboratory notebook. It will be your job to keep good notes in your notebook so that it can help you to complete your tasks. We are going with pencil and paper, but there are other tools like Microsoft OneNote that you can use which you can cut and paste screenshots, code, and other images into. Start with pen and paper. You can move to something digital later when you feel comfortable with the process. Oftentimes, even with a digital notebook, I still keep the handy pen and paper around.
+
+Write your name on the notebook cover and put the date it was started
+Reserve the first 3 pages for the table of contents...label the top of the page as table of contents
+Number the pages in the upper right hand corner so you can quickly find where the information in your notebook is
+
+## GENERAL FORMAT
+
+Title at top of page
+Description of the project objectives
+Any problems that you encountered and how you fixed it
+Results of the project
+Instructions about how to use the products you created in your project
+Create a table of contents entry in the front of your notebook
 
 ## MAIN TOOLS AND WORKFLOW MOTIVATION
 
@@ -57,6 +136,7 @@ Note: the Raspbian with PIXEL image contained in the ZIP archive is over 4GB in 
 - Unzip (Linux)
 
 **Writing an image to the SD card**
+
 You will need to use an image writing tool to install the image you have downloaded on your SD card.
 Etcher is a graphical SD card writing tool that works on Mac OS, Linux and Windows, and is the easiest option for most users. Etcher also supports writing images directly from the zip file, without any unzipping required. To write your image with Etcher:
 Download Etcher and install it.
@@ -107,54 +187,6 @@ This step is a bit tricky, but once one or two pins are soldered it becomes much
 ### Step 4: Good Job!
 
 Good job! You just soldered your first (Maybe) set of header pins. Will I have done this more than a few times, I am no where near a professional, in fact I am somewhat of an amateur. So If I can do it, so can you. It takes around 5 minutes, so go for it!
-
-
-# Lab 4: Homework
-
-## Explore C program creation and compilation.
-
-**Task:**
-
-Given the time an object falls,in seconds, compute the velocity of the object when it hits the ground using: <br>
-`velocity = g * time`
-
-and the distance it fell using:  <br>
-`distance = g * t * t / 2`
-
-**Use the arduino to accomplish your task.**
-
-You will just use a static float assignment to enter the time like this: <br>
-
-`	float time = 2.3;`
-
-Or whatever time is required
-
-
-# Lab 4: Assemble Your Kit
-
-## LABORATORY NOTEBOOK
-
-A lab notebook is one of the most important tools you will have in your journey into programming and electronics. Keeping good notes will save you time and trouble. The lab notebook is where you will write down important information about your projects. Many times, you will have a problem that will need to be solved in electronics or programming which is very similar to one you had already solved before. If it has been a while since you solved the problem the last time, you might not remember exactly how you did it. This is where your lab notebook comes in handy.
-As you write your lab notebook, keep this at the forefront of your mind when you take notes. Think about all of the effort you took to solve this problem that you are currently facing and how you wouldn’t have to go through all that effort again if you come across it next time. You will be tempted to cut corners thinking that you will remember and don’t need to write it all down but in time you will see when you are looking back through your notes what you need and what you don’t need.
-The other use for a lab notebook is for others to look at and figure out what you did. A good lab notebook will be able to convey all of the information about a project in a way that others would be able to follow it and repeat what you did.
-
-
-## PROJECT ASSIGNMENT
-
-Each of you will be given a laboratory notebook. It will be your job to keep good notes in your notebook so that it can help you to complete your tasks. We are going with pencil and paper, but there are other tools like Microsoft OneNote that you can use which you can cut and paste screenshots, code, and other images into. Start with pen and paper. You can move to something digital later when you feel comfortable with the process. Oftentimes, even with a digital notebook, I still keep the handy pen and paper around.
-
-Write your name on the notebook cover and put the date it was started
-Reserve the first 3 pages for the table of contents...label the top of the page as table of contents
-Number the pages in the upper right hand corner so you can quickly find where the information in your notebook is
-
-## GENERAL FORMAT
-
-Title at top of page
-Description of the project objectives
-Any problems that you encountered and how you fixed it
-Results of the project
-Instructions about how to use the products you created in your project
-Create a table of contents entry in the front of your notebook
 
 
 # Lab 3: X-mas lights with Arduino, Part II
