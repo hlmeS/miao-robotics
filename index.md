@@ -35,11 +35,12 @@ We will be using the following two commands to enable you to receive data from t
 
 We will use this command to receive Serial Communications from the serial monitor.
 
-https://www.arduino.cc/en/Serial/ReadString
+[https://www.arduino.cc/en/Serial/ReadString](https://www.arduino.cc/en/Serial/ReadString)
 
 Input from the Serial monitor will come in as a string, we want to convert it to a float using this command
 
-https://www.arduino.cc/en/Tutorial/StringToFloatExample
+[https://www.arduino.cc/en/Tutorial/StringToFloatExample](https://www.arduino.cc/en/Tutorial/StringToFloatExample)
+
 In our exercise we will now use the serial monitor to input time into your program and have it process and give you an output.
 
 
@@ -47,7 +48,7 @@ In our exercise we will now use the serial monitor to input time into your progr
 
 For your homework read the instructions on IF statements:
 
-https://www.arduino.cc/reference/en/language/structure/control-structure/if/
+[https://www.arduino.cc/reference/en/language/structure/control-structure/if/](https://www.arduino.cc/reference/en/language/structure/control-structure/if/)
 
 Use an if statement to tell you YES as an output on your serial monitor. if your speed after falling is over 120 meters/second and NO if it is not.
 
@@ -55,7 +56,7 @@ Use an if statement to tell you YES as an output on your serial monitor. if your
 
 We will give you several LEDs. Use the DigitalWrite function:
 
-https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/
+[https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/](https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/)
 
 Using the LEDS create a program that will take a time input in seconds and light up a specific number of LEDS depending on how fast you are travelling after falling. More LEDs if you are falling faster. Use the same LED circuit set up as in Lab 2.
 
