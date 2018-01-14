@@ -58,6 +58,7 @@ void loop() {
 Now we want to modify this to be able to dynamically enter in both acceleration due to gravity and the time falling through the serial monitor. We will use the following template which will be the same template you will use from now on when receiving multiple values from the serial port to the Arduino.
 
 ```c
+  bool DEBUG = true;  // change to true/false to turn printing on/off
   while (Serial.available()) {
     String line = Serial.readStringUntil('\r');
     if (DEBUG) Serial.println(line);
@@ -70,7 +71,6 @@ Now we want to modify this to be able to dynamically enter in both acceleration 
         Serial.println("*************RECEIVED DATA**************");
         Serial.println("parsing....");
       }
-      bool buttonpress;
       //using strok_r() to parse the incoming TCP message
       //pointers to store temporary locations of parsed variables
       char linebuf[100];
