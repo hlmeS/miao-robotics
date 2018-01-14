@@ -2,12 +2,110 @@
 
 - General announcements
   - [Introduction](#introduction)
+  - [Piazza Forum](#piazza-forum)
 - Lab Activities
   - [Lab 1: Circuits and GPIO Control with Arduino](#lab-1-circuits-and-gpio-control-with-arduino)
   - [Lab 2: X-mas lights with Arduino](#lab-2-x-mas-lights-with-arduino)
   - [Lab 3: X-mas lights with Arduino, Part 2](#lab-2-x-mas-lights-with-arduino-part-ii)
   - [Lab 4: Assemble Your Kit](#lab-4-assemble-your-kit)
   - [Lab 5: Seriasl Communication and IF Statement](#lab-5-serial-communication-and-if-statements)
+  - [Lab 6: Parsing Serial Data](#lab-6-parsing-serial-data)
+
+# Piazza Forum
+
+We've created an online space for you to ask questions and for help at any time! Sign up for the class Piazza page at [https://piazza.com](https://piazza.com) . Sign up for an account and search for the school MIAO and add the class with access code ARD160.
+
+# Lab 6: Parsing Serial Data
+
+Parsing will become an extremely important concept for all of your programming and electronic projects. Parsing is the idea that we will send some data from one place to another, then be able to read and break that data apart into meaningful items. Let’s make an example to make it clear:
+We have this data:
+```
+	Acceleration due to gravity = 5.3 m/s^2
+	Time spent falling = 33 seconds
+```
+We saw that in Lab 5 we could enter in the time spent falling and read it into a variable in the Arduino from the serial monitor. Now we need to read 2 numbers into two variables!!! We need to read the time into the time variable and read the acceleration due to gravity into another variable.
+This is very important when getting one device to send data to another device. Often you will have to send many different pieces of information. Parsing gives us a way to send many values at once then pull them apart. We will use this same protocol later when we combine the Raspberry PI with the Arduino to issue commands to the Arduino so take good notes.
+We will build upon our previous work from homework 4 where you built a program to determine the velocity and distance after falling so many seconds.
+Recall the program from homework 4:
+
+``` c
+void setup() {
+
+ //OPEN SERIAL COMMUNICATIONS
+Serial.begin(9600);
+}
+void loop() {
+
+  //DECLARE YOUR VARIABLES
+  float time_spent_falling = 3; //seconds
+  float acceleration_due_to_gravity = 9.8; //m/s^2
+  float velocity; //m/s
+  float distance; // m
+  //CALCULATE VELOCITY
+  velocity = acceleration_due_to_gravity * time_spent_falling;
+  //CALCULATE DISTANCE
+  distance = acceleration_due_to_gravity * time_spent_falling * time_spent_falling / 2;
+  //PRINT OUT CALCULATED VALUES
+  Serial.print("Velocity is: ");
+  Serial.println(velocity);
+  Serial.print("Distance is: ");
+  Serial.println(distance);
+  //DELAY FOR A LITTLE WHILE BEFORE PRINTING VALUES AGAIN
+  delay(2000);
+}
+```
+
+Now we want to modify this to be able to dynamically enter in both acceleration due to gravity and the time falling through the serial monitor. We will use the following template which will be the same template you will use from now on when receiving multiple values from the serial port to the Arduino.
+
+```c
+  while (Serial.available()) {
+    String line = Serial.readStringUntil('\r');
+    if (DEBUG) Serial.println(line);
+    //sample string acceleration_due_to_gravity?time_spent_falling?ding
+    if (line.endsWith("ding"))    //YOUR ENTRY SHOULD END WITH ding
+    {
+      //THIS IS DEBUG OUTPUT...CHANGE 1 TO 0 TO STOP IT FROM PRINTING
+      if (1)
+      {
+        Serial.println("*************RECEIVED DATA**************");
+        Serial.println("parsing....");
+      }
+      bool buttonpress;
+      //using strok_r() to parse the incoming TCP message
+      //pointers to store temporary locations of parsed variables
+      char linebuf[100];
+      char *one, *two;
+      line.toCharArray(linebuf, 100);
+      one = strtok(linebuf, "?");
+      acceleration_due_to_gravity = atof(one);           //MODIFY THIS LINE TO STORE THE FIRST ENTRY INTO A VARIABLE USE atoi(one) for integer and atof(one) for a float
+      one = strtok(NULL, "?");                            //COPY AND PASTE THIS LINE AND THE FOLLOWING LINE FOR EVERY ADDITIONAL PARAMETER NEEDED
+      time_spent_falling = atof(one);
+      //THIS IS DEBUG OUTPUT...CHANGE 1 TO 0 TO STOP IT FROM PRINTING
+      if (1) {
+        Serial.println("Parsed String:  ");
+        Serial.print("acceleration_due_to_gravity: \t");
+        Serial.println(acceleration_due_to_gravity);
+        Serial.print("  time_spent_falling: \t");
+        Serial.println(time_spent_falling);
+        Serial.println("*****************************************************");
+      } // end DEBUG
+    }
+  } // end while client.available
+
+```
+
+## LAB ASSIGNMENT
+Use the code above to modify your velocity and distance code to be able to take in both variables from the serial monitor program. (hint: if your acceleration due to gravity is 5.4 m/s^2 and time falling is 3 seconds your string should look like “5.4?3?ding” entered into the serial monitor.
+
+## HOMEWORK ASSIGNMENT - Walk signal
+Modify the circuit from Lab 2 to use only 2 LEDs. Choose 2 LEDs of different colors. Your job is to create the timing controller for a walk signal. It should have the following sequence.
+LED 1 - on for a specified time (time1)  then turns off
+LED 2 - starts flashing after LED 1 turns off and flashes with a specified interval (interval1) for a specified number of flashes (flash1)
+LED 2 - stays on solid for a specified time (time2) then turns off
+REPEAT FROM LED 1
+Your program should use the serial interface and the code used for the lab exercise to take in values for (time1, interval1, flash1, and time2).
+Consider using a “for” loop for flashing LED 2. See lab 2 for your reference to for loops. Remember to take good notes in your lab notebook to record progress or problems.
+
 
 
 # Lab 5: Serial Communication and IF Statements

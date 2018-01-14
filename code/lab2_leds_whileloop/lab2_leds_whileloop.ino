@@ -15,7 +15,7 @@ void setup() {
   while (pin < 14) { 
     pinMode(pin, OUTPUT);
     pin = pin + 1;
-    
+    delay(50);
   }
 }
 
@@ -27,16 +27,18 @@ void loop() {
   while (pin < 14) {
     digitalWrite(pin, HIGH); 
     pin = pin + 1;
+    delay(10);
   }
 
   // wait
-  delay(100); 
+  delay(1000); 
 
   // blink off
   pin = 2; 
   while (pin < 14) {
     digitalWrite(pin, LOW);
     pin = pin + 1;
+    delay(10);
   }
   
   
@@ -44,7 +46,7 @@ void loop() {
   pin = 2;
   while (pin < 14) {
     digitalWrite(pin, HIGH);
-    delay(100); 
+    delay(500); 
     digitalWrite(pin, LOW);
     pin = pin + 1;
   }
