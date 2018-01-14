@@ -20,11 +20,15 @@ We've created an online space for you to ask questions and for help at any time!
 Parsing will become an extremely important concept for all of your programming and electronic projects. Parsing is the idea that we will send some data from one place to another, then be able to read and break that data apart into meaningful items. Let’s make an example to make it clear:
 We have this data:
 ```
-	Acceleration due to gravity = 5.3 m/s^2
+	Acceleration due to gravity = 3.7 m/s^2
 	Time spent falling = 33 seconds
 ```
-We saw that in Lab 5 we could enter in the time spent falling and read it into a variable in the Arduino from the serial monitor. Now we need to read 2 numbers into two variables!!! We need to read the time into the time variable and read the acceleration due to gravity into another variable.
-This is very important when getting one device to send data to another device. Often you will have to send many different pieces of information. Parsing gives us a way to send many values at once then pull them apart. We will use this same protocol later when we combine the Raspberry PI with the Arduino to issue commands to the Arduino so take good notes.
+We saw that in Lab 5 we could enter in the time spent falling and read it into a variable in the Arduino from the serial monitor. Now we need to read 2 numbers into two variables!!! We need to read the time into the time variable and read the acceleration due to gravity into another variable. <br>
+
+This is very important when getting one device to send data to another device. Often you will have to send many different pieces of information. Parsing gives us a way to send many values at once then pull them apart. We will use this same protocol later when we combine the Raspberry PI with the Arduino to issue commands to the Arduino so take good notes. <br>
+
+_**Note: Which planet do you think are we talking about here? How can you tell? Is it bigger or smaller than earth?**_ <br>
+
 We will build upon our previous work from homework 4 where you built a program to determine the velocity and distance after falling so many seconds.
 Recall the program from homework 4:
 
