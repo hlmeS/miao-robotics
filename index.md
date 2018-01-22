@@ -10,6 +10,48 @@
   - [Lab 4: Assemble Your Kit](#lab-4-assemble-your-kit)
   - [Lab 5: Seriasl Communication and IF Statement](#lab-5-serial-communication-and-if-statements)
   - [Lab 6: Parsing Serial Data](#lab-6-parsing-serial-data)
+  - [Lab 7: Driving Stepper Motors](#lab-7-driving-stepper-motors)
+
+
+# Lab 7: Driving Stepper Motors
+
+Now we are ready to really have some fun and make some things move!
+Let’s get started with a stepper motor. A stepper motor allows us to finely control how far a motor moves by giving it instructions to move only one “step” at a time. Every time the motor takes a step it moves a specific distance. We will use these motors to drive the wheels of our robot later. Knowing exactly how far each wheel will turn will allow us to have fine control over the movements of our robot’s movement.
+
+## HOW MANY STEPS IS ONE ROTATION?
+This is the important question when dealing with a stepper motor. This motor that you will be using takes 64 steps for the motor to make one full rotation but the motor is also geared with 1/64 gears. This means that it will take 4096 steps per full rotation of the shaft outside of the motor.
+
+## DATASHEETS
+The datasheet is one of the most important documents that you will use when designing your robots. Take a look at the datasheet for the stepper motor and driver. <br>
+[http://eeshop.unl.edu/pdf/Stepper+Driver.pdf](http://eeshop.unl.edu/pdf/Stepper+Driver.pdf) <br>
+Copy and paste the example code and get the stepper to turn forward and backward by changing the line:
+```
+boolean dir = true;// gre
+to :
+boolean dir = false;
+```
+
+## LIBRARIES
+Libraries will make it easy for us to use many devices. These are pre-programmed functions which allow us to interact with numerous sensors and devices. One day you may be able to write your own library but for now we will use one made from our friends at arduino called the stepper library.
+Use the four pin connection shown here and wire your motor:<br>
+[https://www.arduino.cc/en/Reference/StepperUnipolarCircuit](https://www.arduino.cc/en/Reference/StepperUnipolarCircuit) <br>
+Use this code to see if you can get your motor to turn one full revolution forward and one full revolution backward. How many steps does it take to make one full turn? <br>
+[https://www.arduino.cc/en/Tutorial/StepperOneRevolution](https://www.arduino.cc/en/Tutorial/StepperOneRevolution)
+
+## HOMEWORK
+Create a program using your parsing skills from last time that will take in commands for two stepper motors from the serial console. You should be able to send instructions to your motors to take a specific number of steps.
+Use tinkercad to create a wheel for your stepper motor:<br>
+[https://www.tinkercad.com/](https://www.tinkercad.com/)
+When finished...send your drawing through Piazza for printing during the week and you can test your wheel next week.
+Modify your code so that your commands send distance of travel rather than number of steps. (hint: what is the circumference of your wheel?)
+
+## ADVANCED
+Think about having two wheels on your robot...how would you program your robot to make a turn? Create a function named turn(<degrees>) which takes in a parameter called degrees which will turn the robot the number of degrees called for.
+PRE-LAB FOR NEXT LESSON
+Read the following information about servos:
+- [https://www.arduino.cc/en/Reference/Servo](https://www.arduino.cc/en/Reference/Servo)
+- [https://en.wikipedia.org/wiki/Servo_control](https://en.wikipedia.org/wiki/Servo_control)
+- [https://learn.sparkfun.com/tutorials/pulse-width-modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation)
 
 # Piazza Forum
 
